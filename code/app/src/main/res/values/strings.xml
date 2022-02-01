@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="btnAccueilJeu">Jouer</string>
+    <string name="btnAccueilHS">Highscores</string>
+</resources>
