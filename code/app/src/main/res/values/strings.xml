@@ -5,4 +5,5 @@
     <string name="ici_on_aura_le_jeu">ici on aura le jeu</string>
     <string name="start_the_game">Start the game !</string>
     <string name="nom_du_pecheur">Nom du pêcheur :</string>
+    <string name="strTuto">Bienvenue dans canap\'pêche ! Le but de ce jeu est de cliquer sur un maximum de poissons dans le temps imparti. Mais attention, évitez de cliquer sur les poisson-bombes…</string>
 </resources>

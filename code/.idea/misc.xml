@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.3098958333333333" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewaccueil.xml" value="0.33" />
-        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewjeu.xml" value="0.5" />
-        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewtutolog.xml" value="0.1" />
+        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewcustomjeu.xml" value="0.278125" />
+        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewjeu.xml" value="0.33" />
+        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewtutolog.xml" value="0.22" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.20092592592592592" />
       </map>
     </option>

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -14,8 +15,16 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strTuto" />
 
         <EditText
             android:id="@+id/editTextPecheurName"
@@ -24,11 +33,7 @@
             android:layout_marginBottom="16dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
-            app:layout_constraintBottom_toTopOf="@+id/buttonStartGame"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="Name" />
 
         <Button
             android:id="@+id/buttonStartGame"
@@ -38,8 +43,7 @@
             android:layout_marginLeft="13dp"
             android:layout_marginBottom="29dp"
             android:backgroundTint="@color/yummy_yellow"
-            android:text="@string/start_the_game"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2" />
+            android:text="@string/start_the_game" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

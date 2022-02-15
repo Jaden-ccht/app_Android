@@ -6,13 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.myapplication.R;
-import com.example.myapplication.activity.ActivityJeu;
 import com.example.myapplication.model.Pecheur;
 
 public class ActivityTutoEtLog extends Activity {
@@ -27,27 +25,22 @@ public class ActivityTutoEtLog extends Activity {
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openViewJeu(view, savedInstanceState);
                 EditText inputName = (EditText)findViewById(R.id.editTextPecheurName);
                 thePecheur.setName(inputName.getText().toString());
+                openViewJeu(view);
             }
         });
     }
 
-    public void openViewJeu(View view, @Nullable Bundle savedInstanceState) {
+    public void openViewJeu(View view) {
         Intent monIntent = new Intent(this, ActivityJeu.class);
         startActivity(monIntent);
     }
 
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        thePecheur.setName(savedInstanceState.getString("nomPecheur"));
-        super.onRestoreInstanceState(savedInstanceState);
-    }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putString("nomPecheur", thePecheur.getName());
         super.onSaveInstanceState(outState);
+        outState.putString("nomPecheur", thePecheur.getName());
     }
 }
