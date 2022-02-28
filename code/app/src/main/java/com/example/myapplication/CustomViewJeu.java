@@ -6,11 +6,8 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.WindowInsetsAnimation;
 
 import androidx.annotation.Nullable;
-
-import com.example.myapplication.R;
 
 public class CustomViewJeu extends View {
     private Drawable mCustomImage;
@@ -32,12 +29,13 @@ public class CustomViewJeu extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         Rect imageBounds = canvas.getClipBounds();
-        //Rect fishSize = new Rect(100,100,100,100);
+        Rect fishSize = new Rect(800,650,950,800);
 
         mCustomImage.setBounds(imageBounds);
         mCustomImage.draw(canvas);
 
-        fish.setBounds(imageBounds);
+        fish.setBounds(fishSize);
+
         fish.draw(canvas);
     }
 }

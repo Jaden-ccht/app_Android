@@ -1,9 +1,15 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Canap\'Pêche</string>
     <string name="btnAccueilJeu">Jouer</string>
     <string name="btnAccueilHS">Highscores</string>
     <string name="ici_on_aura_le_jeu">ici on aura le jeu</string>
     <string name="start_the_game">Start the game !</string>
     <string name="nom_du_pecheur">Nom du pêcheur :</string>
     <string name="strTuto">Bienvenue dans canap\'pêche ! Le but de ce jeu est de cliquer sur un maximum de poissons dans le temps imparti. Mais attention, évitez de cliquer sur les poisson-bombes…</string>
+
+    <string name="jouer">Jouer</string>
+    <string name="highscore">Highscore</string>
+    <string name="rules">But du jeu</string>
+    <string name="title">Canap\'Pêche</string>
+    <string name="name">Pseudo</string>
 </resources>
