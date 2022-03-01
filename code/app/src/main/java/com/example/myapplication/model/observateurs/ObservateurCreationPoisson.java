@@ -1,4 +1,7 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.observateurs;
+
+import com.example.myapplication.model.fish.Poisson;
+import com.example.myapplication.model.vagues.VaguePoissons;
 
 public class ObservateurCreationPoisson extends Observateur{
     private VaguePoissons maVaguePoisson;

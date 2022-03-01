@@ -1,8 +1,12 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.vagues;
+
+import com.example.myapplication.model.GameManager;
+import com.example.myapplication.model.observateurs.Observateur;
+import com.example.myapplication.model.fish.Poisson;
 
 import java.util.ArrayList;
 
-public class AnimVaguePoisson extends Observateur{
+public class AnimVaguePoisson extends Observateur {
     private VaguePoissons maVaguePoisson;
    //private GameManager gM;
 

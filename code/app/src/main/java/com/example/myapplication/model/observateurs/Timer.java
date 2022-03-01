@@ -1,6 +1,8 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.observateurs;
 
-public class Timer extends Observateur{
+import com.example.myapplication.model.observateurs.Observateur;
+
+public class Timer extends Observateur {
     private float timeOf1LoopMillis;
 
     //à donner en secondes

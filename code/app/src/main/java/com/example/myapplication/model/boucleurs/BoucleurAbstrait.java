@@ -1,4 +1,6 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.boucleurs;
+
+import com.example.myapplication.model.observateurs.Observateur;
 
 import java.util.ArrayList;
 

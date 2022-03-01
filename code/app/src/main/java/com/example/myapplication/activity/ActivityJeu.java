@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.myapplication.R;
-import com.example.myapplication.model.PecheurTestV2;
+import com.example.myapplication.model.player.PecheurTestV2;
 
 public class ActivityJeu extends Activity {
     private PecheurTestV2 thePecheurTestV2;

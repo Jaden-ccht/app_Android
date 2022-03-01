@@ -1,4 +1,6 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.fish;
+
+import com.example.myapplication.model.deplaceurs.Deplaceur;
 
 import java.util.Observable;
 

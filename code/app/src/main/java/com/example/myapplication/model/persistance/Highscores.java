@@ -1,4 +1,4 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.persistance;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.player;
 
 public class PecheurTestV2 {
     private String name;

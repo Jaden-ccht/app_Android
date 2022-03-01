@@ -1,4 +1,9 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.vagues;
+
+import com.example.myapplication.model.fish.Poisson;
+import com.example.myapplication.model.fish.PoissonBombe;
+import com.example.myapplication.model.fish.PoissonClassique;
+import com.example.myapplication.model.fish.PoissonDore;
 
 import java.util.ArrayList;
 import java.util.Random;

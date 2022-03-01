@@ -1,4 +1,6 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.player;
+
+import com.example.myapplication.model.fish.Poisson;
 
 import java.util.ArrayList;
 

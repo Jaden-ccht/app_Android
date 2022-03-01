@@ -1,7 +1,9 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.fish;
 
 
 import com.example.myapplication.R;
+import com.example.myapplication.model.deplaceurs.DeplaceurLent;
+import com.example.myapplication.model.deplaceurs.DeplaceurRapide;
 
 public class PoissonBombe extends Poisson{
     public PoissonBombe(int valeur) {
