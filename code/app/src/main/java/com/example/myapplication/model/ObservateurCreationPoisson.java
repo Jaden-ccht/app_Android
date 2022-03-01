@@ -1,7 +1,4 @@
-package com.example.myapplication.javafx;
-
-import javafx.geometry.Rectangle2D;
-import javafx.stage.Screen;
+package com.example.myapplication.model;
 
 public class ObservateurCreationPoisson extends Observateur{
     private VaguePoissons maVaguePoisson;

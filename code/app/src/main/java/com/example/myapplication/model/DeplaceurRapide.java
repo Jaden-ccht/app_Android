@@ -1,4 +1,4 @@
-package com.example.myapplication.javafx;
+package com.example.myapplication.model;
 
 import java.util.Random;
 

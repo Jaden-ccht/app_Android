@@ -1,12 +1,11 @@
-package com.example.myapplication.javafx;
+package com.example.myapplication.model;
 
-import javafx.scene.image.Image;
 
-import java.util.Random;
+import com.example.myapplication.R;
 
 public class PoissonBombe extends Poisson{
     public PoissonBombe(int valeur) {
-        super(new Image("img/poissonbombe.png"), valeur - 50);
+        super(R.drawable.poissonbombe, valeur - 50);
 
         if(Math.random() > 0.50)
             super.setDeplaceurPoisson(new DeplaceurLent());

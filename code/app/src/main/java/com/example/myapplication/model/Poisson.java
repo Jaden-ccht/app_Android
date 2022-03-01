@@ -1,64 +1,47 @@
-package com.example.myapplication.javafx;
+package com.example.myapplication.model;
 
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
-import javafx.beans.property.*;
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
+import java.util.Observable;
 
-public abstract class Poisson implements Observable {
+public abstract class Poisson extends Observable {
     private int valeur;
     private Deplaceur deplaceurPoisson;
     private boolean isCatched;
-    private Circle circleClick;
+    private int heightSprite;
+    private int widthSprite;
+    private int noDrawableInR;
+    private int cooXPoisson;
+    private int cooYPoisson;
+
 
     //constructeur
-    public Poisson(Image myImage, int valeur) {
+    public Poisson(int noDrawableInR, int valeur) {
         this.valeur = valeur;
-        setSpritePoisson(myImage);
+        this.noDrawableInR = noDrawableInR;
         setHeightSprite(50);
         setWidthSprite(60);
-        circleClick = new Circle();
-        circleClick.setRadius(50);
-        circleClick.setFill(Color.TRANSPARENT);
-        circleClick.setStroke(Color.TRANSPARENT);
-        circleClick.translateXProperty().bind(this.cooXPoissonProperty().add(30));
-        circleClick.translateYProperty().bind(this.cooYPoissonProperty().add(25));
         isCatched = false;
     }
 
 
-    //binding
-    private ObjectProperty<Image> spritePoisson = new SimpleObjectProperty<>();
-    public Image getSpritePoisson(){return spritePoisson.get();}
-    public void setSpritePoisson(Image nvImage){spritePoisson.set(nvImage);}
-    public ObjectProperty<Image> spritePoissonProperty(){return spritePoisson;}
+    //GETTER & SETTER
+    //(en android pas de propriétés comme en javafx, les getters et setters suffisent)
 
-    private DoubleProperty heightSprite = new SimpleDoubleProperty();
-    public double getHeightSprite(){return heightSprite.get();}
-    public void setHeightSprite(double nvHeight){heightSprite.set(nvHeight);}
-    public ReadOnlyDoubleProperty heightSpriteProperty(){return heightSprite;}
+    public int getHeightSprite() {
+        return heightSprite;
+    }
 
-    private DoubleProperty widthSprite = new SimpleDoubleProperty();
-    public double getWidthSprite(){return widthSprite.get();}
-    public void setWidthSprite(double nvWidth){widthSprite.set(nvWidth);}
-    public ReadOnlyDoubleProperty widthSpriteProperty(){return widthSprite;}
+    public void setHeightSprite(int heightSprite) {
+        this.heightSprite = heightSprite;
+    }
 
-    private IntegerProperty cooXPoisson = new SimpleIntegerProperty();
-    public Integer getCooXPoisson(){return cooXPoisson.get();}
-    public void setCooXPoisson(int nvCoo){cooXPoisson.set(nvCoo);}
-    public ReadOnlyIntegerProperty cooXPoissonProperty(){return cooXPoisson;}
+    public int getWidthSprite() {
+        return widthSprite;
+    }
 
-    private IntegerProperty cooYPoisson = new SimpleIntegerProperty();
-    public Integer getCooYPoisson(){return cooYPoisson.get();}
-    public void setCooYPoisson(int nvCoo){cooYPoisson.set(nvCoo);}
-    public ReadOnlyIntegerProperty cooYPoissonProperty(){return cooYPoisson;}
+    public void setWidthSprite(int widthSprite) {
+        this.widthSprite = widthSprite;
+    }
 
-
-
-
-    //getters et setters
     public Deplaceur getDeplaceurPoisson() {
         return deplaceurPoisson;
     }
@@ -75,6 +58,14 @@ public abstract class Poisson implements Observable {
         this.valeur = valeur;
     }
 
+    public int getNoDrawableInR() {
+        return noDrawableInR;
+    }
+
+    public void setNoDrawableInR(int noDrawableInR) {
+        this.noDrawableInR = noDrawableInR;
+    }
+
     public boolean isCatched() {
         return isCatched;
     }
@@ -83,23 +74,19 @@ public abstract class Poisson implements Observable {
         isCatched = catched;
     }
 
-    public Circle getCircleClick() {
-        return circleClick;
+    public int getCooXPoisson() {
+        return cooXPoisson;
     }
 
-    public void setCircleClick(Circle circleClick) {
-        this.circleClick = circleClick;
+    public void setCooXPoisson(int cooXPoisson) {
+        this.cooXPoisson = cooXPoisson;
     }
 
-
-    //A ENLEVER
-    @Override
-    public void addListener(InvalidationListener listener) {
-
+    public int getCooYPoisson() {
+        return cooYPoisson;
     }
 
-    @Override
-    public void removeListener(InvalidationListener listener) {
-
+    public void setCooYPoisson(int cooYPoisson) {
+        this.cooYPoisson = cooYPoisson;
     }
 }

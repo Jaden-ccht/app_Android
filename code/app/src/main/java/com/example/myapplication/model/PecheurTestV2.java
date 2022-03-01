@@ -1,11 +1,11 @@
 package com.example.myapplication.model;
 
-public class Pecheur {
+public class PecheurTestV2 {
     private String name;
     private int points;
 
 
-    public Pecheur() {
+    public PecheurTestV2() {
        name = "default_name";
         points = 0;
     }

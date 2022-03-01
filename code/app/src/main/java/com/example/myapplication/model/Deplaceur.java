@@ -1,7 +1,4 @@
-package com.example.myapplication.javafx;
-
-import javafx.scene.Node;
-import javafx.scene.layout.AnchorPane;
+package com.example.myapplication.model;
 
 public abstract class Deplaceur {
 

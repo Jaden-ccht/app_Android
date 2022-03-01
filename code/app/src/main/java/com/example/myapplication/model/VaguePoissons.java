@@ -1,17 +1,11 @@
-package com.example.myapplication.javafx;
+package com.example.myapplication.model;
 
-
-import javafx.beans.property.ListProperty;
-import javafx.beans.property.ReadOnlyListProperty;
-import javafx.beans.property.SimpleListProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
+import java.util.ArrayList;
 import java.util.Random;
 
 public class VaguePoissons {
     private int nbPoissons;
-
+    private ArrayList<Poisson> listPoissons;
 
     //CONSTRUCTEUR
     public VaguePoissons(int nbPoissons) {
@@ -48,18 +42,19 @@ public class VaguePoissons {
         }
     }
 
-
     //GETTERS ET SETTERS
-    ObservableList<Poisson> observableListPoissons = FXCollections.observableArrayList();
-    ListProperty<Poisson> listPoissons = new SimpleListProperty<Poisson>(observableListPoissons);
-    public ObservableList<Poisson> getListPoissons(){return listPoissons.get();}
-    public void setListPoissons(SimpleListProperty<Poisson> nvListe){listPoissons.set(nvListe);}
-    public ReadOnlyListProperty<Poisson> listPoissonsProperty(){return listPoissons;}
-
     public int getNbPoissons() {
         return nbPoissons;
     }
     public void setNbPoissons(int nbPoissons) {
         this.nbPoissons = nbPoissons;
+    }
+
+    public ArrayList<Poisson> getListPoissons() {
+        return listPoissons;
+    }
+
+    public void setListPoissons(ArrayList<Poisson> listPoissons) {
+        this.listPoissons = listPoissons;
     }
 }

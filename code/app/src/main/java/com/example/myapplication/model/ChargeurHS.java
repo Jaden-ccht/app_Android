@@ -1,4 +1,4 @@
-package com.example.myapplication.model.highscores;
+package com.example.myapplication.model;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

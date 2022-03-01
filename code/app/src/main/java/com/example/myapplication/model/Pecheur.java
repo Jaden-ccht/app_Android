@@ -1,30 +1,50 @@
 package com.example.myapplication.model;
 
+import java.util.ArrayList;
+
 public class Pecheur {
-    private String name;
-    private int points;
+    private String pseudo;
+    private ArrayList<Poisson> listPoissonsAttrapes;
+    private int scorePecheur;
 
-
-    public Pecheur() {
-       name = "default_name";
-        points = 0;
+    //constructeur
+    public Pecheur(String pseudo) {
+        this.pseudo = pseudo;
+        this.setScorePecheur(0);
+        listPoissonsAttrapes = new ArrayList<Poisson>();
     }
 
+
+    /*
+    //binding javafx
+    private IntegerProperty scorePecheur = new SimpleIntegerProperty();
+    public Integer getScorePecheur(){return scorePecheur.get();}
+    public void setScorePecheur(int nvScore){scorePecheur.set(nvScore);}
+    public ReadOnlyIntegerProperty scorePecheurProperty(){return scorePecheur;}
+    */
 
     //GETTERS & SETTERS
-    public String getName() {
-        return name;
+    public String getPseudo() {
+        return pseudo;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
     }
 
-    public int getPoints() {
-        return points;
+    public ArrayList<Poisson> getListPoissonsAttrapes() {
+        return listPoissonsAttrapes;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
+    public void setListPoissonsAttrapes(ArrayList<Poisson> listPoissonsAttrapes) {
+        this.listPoissonsAttrapes = listPoissonsAttrapes;
+    }
+
+    public int getScorePecheur() {
+        return scorePecheur;
+    }
+
+    public void setScorePecheur(int scorePecheur) {
+        this.scorePecheur = scorePecheur;
     }
 }

@@ -1,8 +1,5 @@
 package com.example.myapplication.model;
 
-import com.example.myapplication.model.ChargeurHS;
-import com.example.myapplication.model.highscores.SauvegardeurHS;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;

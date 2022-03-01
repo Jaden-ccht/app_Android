@@ -11,10 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.myapplication.R;
-import com.example.myapplication.model.Pecheur;
+import com.example.myapplication.model.PecheurTestV2;
 
 public class ActivityTutoEtLog extends Activity {
-    private Pecheur thePecheur = new Pecheur();
+    private PecheurTestV2 thePecheurTestV2 = new PecheurTestV2();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class ActivityTutoEtLog extends Activity {
             @Override
             public void onClick(View view) {
                 EditText inputName = (EditText)findViewById(R.id.editTextPecheurName);
-                thePecheur.setName(inputName.getText().toString());
+                thePecheurTestV2.setName(inputName.getText().toString());
                 openViewJeu(view);
             }
         });
@@ -41,6 +41,6 @@ public class ActivityTutoEtLog extends Activity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("nomPecheur", thePecheur.getName());
+        outState.putString("nomPecheur", thePecheurTestV2.getName());
     }
 }

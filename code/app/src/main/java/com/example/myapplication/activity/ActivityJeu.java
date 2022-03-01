@@ -2,21 +2,18 @@ package com.example.myapplication.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.myapplication.CustomViewJeu;
 import com.example.myapplication.R;
-import com.example.myapplication.model.Pecheur;
+import com.example.myapplication.model.PecheurTestV2;
 
 public class ActivityJeu extends Activity {
-    private Pecheur thePecheur;
+    private PecheurTestV2 thePecheurTestV2;
 
     public ActivityJeu() {
-        thePecheur = new Pecheur();
+        thePecheurTestV2 = new PecheurTestV2();
     }
 
     @Override
@@ -31,6 +28,6 @@ public class ActivityJeu extends Activity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("nomPecheur", thePecheur.getName());
+        outState.putString("nomPecheur", thePecheurTestV2.getName());
     }
 }

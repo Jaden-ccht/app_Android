@@ -1,16 +1,8 @@
-package com.example.myapplication.javafx;
-
-import classes.*;
-import classes.highscores.ChargeurHS;
-import classes.highscores.Highscores;
-import classes.highscores.SauvegardeurHS;
-import javafx.collections.ListChangeListener;
-import javafx.stage.Stage;
+package com.example.myapplication.model;
 
 import java.io.IOException;
 
 public class GameManager {
-    private final Stage myStage;
     private Pecheur lePecheur;
     private VaguePoissons vP;
     private Highscores hS;
@@ -20,8 +12,7 @@ public class GameManager {
     private Thread thread1;
     private Thread thread2;
 
-    public GameManager(Stage myStage) {
-        this.myStage = myStage;
+    public GameManager() {
         vP = new VaguePoissons(7);
         try {
             hS = new Highscores(new SauvegardeurHS(), new ChargeurHS());
@@ -48,10 +39,6 @@ public class GameManager {
 
 
     //GETTERS ET SETTERS
-    public Stage getMyStage() {
-        return myStage;
-    }
-
     public VaguePoissons getvP() {
         return vP;
     }
