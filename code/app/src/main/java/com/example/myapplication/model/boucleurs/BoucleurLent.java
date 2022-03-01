@@ -1,7 +1,7 @@
 package com.example.myapplication.model.boucleurs;
 
 import com.example.myapplication.model.observateurs.ObservateurCreationPoisson;
-import com.example.myapplication.model.vagues.VaguePoissons;
+import com.example.myapplication.model.fish.VaguePoissons;
 
 import java.util.ArrayList;
 

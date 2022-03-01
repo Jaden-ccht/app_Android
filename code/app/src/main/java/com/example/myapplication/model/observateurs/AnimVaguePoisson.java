@@ -1,8 +1,8 @@
-package com.example.myapplication.model.vagues;
+package com.example.myapplication.model.observateurs;
 
-import com.example.myapplication.model.GameManager;
-import com.example.myapplication.model.observateurs.Observateur;
+import com.example.myapplication.model.manager.GameManager;
 import com.example.myapplication.model.fish.Poisson;
+import com.example.myapplication.model.fish.VaguePoissons;
 
 import java.util.ArrayList;
 

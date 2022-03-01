@@ -1,4 +1,4 @@
-package com.example.myapplication.model;
+package com.example.myapplication.model.manager;
 
 import com.example.myapplication.model.boucleurs.BoucleurLent;
 import com.example.myapplication.model.boucleurs.BoucleurRapide;
@@ -7,7 +7,7 @@ import com.example.myapplication.model.persistance.ChargeurHS;
 import com.example.myapplication.model.persistance.Highscores;
 import com.example.myapplication.model.persistance.SauvegardeurHS;
 import com.example.myapplication.model.player.Pecheur;
-import com.example.myapplication.model.vagues.VaguePoissons;
+import com.example.myapplication.model.fish.VaguePoissons;
 
 import java.io.IOException;
 

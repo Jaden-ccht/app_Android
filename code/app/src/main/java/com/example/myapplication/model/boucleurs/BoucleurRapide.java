@@ -1,9 +1,9 @@
 package com.example.myapplication.model.boucleurs;
 
-import com.example.myapplication.model.vagues.AnimVaguePoisson;
-import com.example.myapplication.model.GameManager;
+import com.example.myapplication.model.observateurs.AnimVaguePoisson;
+import com.example.myapplication.model.manager.GameManager;
 import com.example.myapplication.model.observateurs.Timer;
-import com.example.myapplication.model.vagues.VaguePoissons;
+import com.example.myapplication.model.fish.VaguePoissons;
 
 import java.util.ArrayList;
 
