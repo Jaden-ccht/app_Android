@@ -12,4 +12,10 @@
     <string name="rules">But du jeu</string>
     <string name="title">Canap\'Pêche</string>
     <string name="name">Pseudo</string>
+    <string name="gold_fish">Gold Fish</string>
+    <string name="gold_fish_rule">Pêcher un poisson doré ajoute 10 points à votre score</string>
+    <string name="bomb_fish">Bomb Fish</string>
+    <string name="bomb_fish_rule">AÏe ! Ne touchez pas à ces poissons, ils vous enlèveront 10 points</string>>
+    <string name="fish">Fish</string>
+    <string name="fish_rule">Ce sont les poissons les plus fréquents</string>
 </resources>
