@@ -1,27 +1,28 @@
 package com.example.myapplication.model.observateurs;
 
-import com.example.myapplication.model.manager.GameManager;
+import android.util.Log;
+
 import com.example.myapplication.model.fish.Poisson;
 import com.example.myapplication.model.fish.VaguePoissons;
-
-import java.util.ArrayList;
+import com.example.myapplication.model.manager.GameManager;
 
 public class AnimVaguePoisson extends Observateur {
     private VaguePoissons maVaguePoisson;
-   //private GameManager gM;
+    private GameManager gM;
 
     public AnimVaguePoisson(VaguePoissons maVaguePoisson, GameManager gM) {
-        //this.gM = gM;
+        this.gM = gM;
         this.maVaguePoisson = maVaguePoisson;
     }
 
     @Override
     public void update() {
 
-        VaguePoissons maVaguePoissonUpdated = getMaVaguePoisson();
-        ArrayList<Poisson> listFishtoRemove = new ArrayList<Poisson>();
+        //VaguePoissons maVaguePoissonUpdated = getMaVaguePoisson();
+        //ArrayList<Poisson> listFishtoRemove = new ArrayList<Poisson>();
         for (Poisson p:
-             getMaVaguePoisson().getListPoissons()) {
+             gM.getvP().getListPoissons()) {
+            Log.d("cooFish","test");
             if(!p.isCatched())
                 p.getDeplaceurPoisson().deplacer(p);
         }

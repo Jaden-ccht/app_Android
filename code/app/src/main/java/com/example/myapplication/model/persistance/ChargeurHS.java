@@ -18,7 +18,7 @@ public class ChargeurHS {
 
 
         try{
-            String filename= "rsrc/data/dataHighscores.txt";
+            String filename= "../../data/dataHighscores.txt";
             FileReader fr = new FileReader(filename);
             BufferedReader bfr = new BufferedReader(fr);
             String ligneLue;

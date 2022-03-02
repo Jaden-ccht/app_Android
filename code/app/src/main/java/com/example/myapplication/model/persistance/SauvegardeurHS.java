@@ -10,7 +10,7 @@ public class SauvegardeurHS {
 
         try
         {
-            String filename= "rsrc/data/dataHighscores.txt";
+            String filename= "../../data/dataHighscores.txt";
             File theFile = new File(filename);
 
             FileWriter fw = new FileWriter(filename,true);

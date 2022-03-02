@@ -3,7 +3,6 @@ package com.example.myapplication.activityV2;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.EditText;
 
@@ -23,6 +22,14 @@ public class MainActivity extends AppCompatActivity {
             inputText.setText(savedInstanceState.getString("nickname"));
         }
     }
+
+    /* Un onsaveinstancestate
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("nomPecheur", thePecheurTestV2.getName());
+    }
+     */
 
 
 

@@ -9,6 +9,7 @@ public class VaguePoissons {
 
     //CONSTRUCTEUR
     public VaguePoissons(int nbPoissons) {
+        listPoissons = new ArrayList<>();
         this.nbPoissons = nbPoissons;
 
         Random r = new Random();

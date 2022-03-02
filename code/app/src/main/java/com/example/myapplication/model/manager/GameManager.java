@@ -2,14 +2,10 @@ package com.example.myapplication.model.manager;
 
 import com.example.myapplication.model.boucleurs.BoucleurLent;
 import com.example.myapplication.model.boucleurs.BoucleurRapide;
-import com.example.myapplication.model.observateurs.Timer;
-import com.example.myapplication.model.persistance.ChargeurHS;
-import com.example.myapplication.model.persistance.Highscores;
-import com.example.myapplication.model.persistance.SauvegardeurHS;
-import com.example.myapplication.model.player.Pecheur;
 import com.example.myapplication.model.fish.VaguePoissons;
-
-import java.io.IOException;
+import com.example.myapplication.model.observateurs.Timer;
+import com.example.myapplication.model.persistance.Highscores;
+import com.example.myapplication.model.player.Pecheur;
 
 public class GameManager {
     private Pecheur lePecheur;
@@ -23,12 +19,13 @@ public class GameManager {
 
     public GameManager() {
         vP = new VaguePoissons(7);
+        /*
         try {
             hS = new Highscores(new SauvegardeurHS(), new ChargeurHS());
             System.out.println(hS.getMapHighScores().toString());
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
         millisSleepBoucleurRapide = 25; //25 millissec
         millisSleepBoucleurLent = 7000; //7s sec
     }
