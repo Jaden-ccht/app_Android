@@ -10,18 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
 
-        <!-- Choisir l'activité principale
-        <activity android:name=".activity.MainActivityAccueil" android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-
-        -->
-
         <activity
-            android:name=".activityV2.MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:exported="true">
             <intent-filter>
@@ -30,34 +20,26 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.ActivityTutoEtLog" android:exported="true"/>
-        <activity android:name=".activity.ActivityJeu" android:exported="true" android:screenOrientation="landscape"/>
-        <activity android:name=".activity.ActivityGameOver" android:exported="true"/>
-        <activity android:name=".activity.ActivityHighscores" android:exported="true"/>
-
-
-        <!-- Activités que j'ai rajouté -->
-
         <activity
-            android:name=".activityV2.Highscore"
+            android:name=".activity.Highscore"
             android:label="@string/app_name"
             android:exported="true"
-            android:parentActivityName=".activityV2.MainActivity">
+            android:parentActivityName=".activity.MainActivity">
         </activity>
 
         <activity
-            android:name=".activityV2.Rules"
+            android:name=".activity.Rules"
             android:label="@string/app_name"
             android:exported="true"
-            android:parentActivityName=".activityV2.MainActivity">
+            android:parentActivityName=".activity.MainActivity">
         </activity>
 
         <activity
-            android:name=".activityV2.gameView"
+            android:name=".activity.gameView"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
             android:exported="true"
-            android:parentActivityName=".activityV2.MainActivity">
+            android:parentActivityName=".activity.MainActivity">
         </activity>
     </application>
 

@@ -37,7 +37,7 @@ public class VaguePoissons {
              getListPoissons()) {
             Random rCooY = new Random();
             int lowY = 150;
-            int highY = 550;
+            int highY = 750;
             p.setCooXPoisson(15);
             p.setCooYPoisson(rCooY.nextInt(highY-lowY) + lowY);
         }

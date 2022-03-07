@@ -13,7 +13,7 @@ public class BoucleurRapide extends BoucleurAbstrait{
         super.setListObservateurs(new ArrayList<>());
         super.attacher(new AnimVaguePoisson(vP, myGm));
         this.setMillisSleep(millisSleep);
-        Timer myTimer = new Timer(45, getMillisSleep());
+        Timer myTimer = new Timer(25, getMillisSleep());
         super.attacher(myTimer);
         myGm.setTheTimer(myTimer);
     }

@@ -18,7 +18,7 @@ public class GameManager {
     private Thread thread2;
 
     public GameManager() {
-        vP = new VaguePoissons(7);
+        vP = new VaguePoissons(4);
         /*
         try {
             hS = new Highscores(new SauvegardeurHS(), new ChargeurHS());
@@ -27,13 +27,13 @@ public class GameManager {
             e.printStackTrace();
         }*/
         millisSleepBoucleurRapide = 25; //25 millissec
-        millisSleepBoucleurLent = 7000; //7s sec
+        millisSleepBoucleurLent = 2500; //7s sec
     }
 
 
 
     public void startNewGame() {
-        vP = new VaguePoissons(7);
+        vP = new VaguePoissons(4);
         lePecheur.setScorePecheur(0);
         BoucleurRapide boucleurRapide = new BoucleurRapide(millisSleepBoucleurRapide, vP, this);
         BoucleurLent boucleurLent = new BoucleurLent(millisSleepBoucleurLent, vP);

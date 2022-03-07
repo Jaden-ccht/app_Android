@@ -1,4 +1,4 @@
-package com.example.myapplication.activityV2;
+package com.example.myapplication.activity;
 
 import android.content.Intent;
 import android.content.res.Configuration;

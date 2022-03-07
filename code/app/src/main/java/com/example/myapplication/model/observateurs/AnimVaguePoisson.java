@@ -20,9 +20,8 @@ public class AnimVaguePoisson extends Observateur {
 
         //VaguePoissons maVaguePoissonUpdated = getMaVaguePoisson();
         //ArrayList<Poisson> listFishtoRemove = new ArrayList<Poisson>();
-        for (Poisson p:
-             gM.getvP().getListPoissons()) {
-            Log.d("cooFish","test");
+        for (Poisson p: gM.getvP().getListPoissons()) {
+            //Log.d("cooFish","Update AnimVague");
             if(!p.isCatched())
                 p.getDeplaceurPoisson().deplacer(p);
         }

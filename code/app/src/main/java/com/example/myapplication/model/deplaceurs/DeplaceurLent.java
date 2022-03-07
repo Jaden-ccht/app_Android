@@ -10,12 +10,12 @@ public class DeplaceurLent extends Deplaceur{
     public void deplacer(Poisson p) {
         Random r = new Random();
         int firstMovementIsUp = r.nextInt(2);
-        p.setCooXPoisson(p.getCooXPoisson()+5);
+        p.setCooXPoisson(p.getCooXPoisson()+15);
 
         //ou si le poisson est trop haut ou trop bas sur l'écran
         if((firstMovementIsUp == 0 || p.getCooYPoisson() <= 100) &&  p.getCooYPoisson() <= 700)
-            p.setCooYPoisson(p.getCooYPoisson()+5);
+            p.setCooYPoisson(p.getCooYPoisson()+15);
         else
-            p.setCooYPoisson(p.getCooYPoisson()-5);
+            p.setCooYPoisson(p.getCooYPoisson()-15);
     }
 }
