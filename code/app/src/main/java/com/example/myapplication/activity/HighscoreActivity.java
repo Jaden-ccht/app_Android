@@ -15,7 +15,7 @@ import com.example.myapplication.model.persistance.OneHS;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Highscore extends AppCompatActivity {
+public class HighscoreActivity extends AppCompatActivity {
     private RecyclerView theRecyclerView;
     private List<OneHS> mesHS;
     private HighScoresAdapter theAdapter;

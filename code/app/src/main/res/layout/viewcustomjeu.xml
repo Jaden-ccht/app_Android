@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.myapplication.CustomViewJeu
+    <com.example.myapplication.GameView
         android:id="@+id/customview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </com.example.myapplication.CustomViewJeu>
+    </com.example.myapplication.GameView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

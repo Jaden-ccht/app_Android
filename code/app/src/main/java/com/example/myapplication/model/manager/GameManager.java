@@ -3,6 +3,7 @@ package com.example.myapplication.model.manager;
 import com.example.myapplication.model.boucleurs.BoucleurLent;
 import com.example.myapplication.model.boucleurs.BoucleurRapide;
 import com.example.myapplication.model.fish.VaguePoissons;
+import com.example.myapplication.model.observateurs.AnimVaguePoisson;
 import com.example.myapplication.model.observateurs.Timer;
 import com.example.myapplication.model.persistance.Highscores;
 import com.example.myapplication.model.player.Pecheur;
@@ -16,6 +17,9 @@ public class GameManager {
     private Timer theTimer;
     private Thread thread1;
     private Thread thread2;
+    private AnimVaguePoisson animatorVP;
+    private int heightGameView;
+    private int widthGameView;
 
     public GameManager() {
         vP = new VaguePoissons(4);
@@ -30,12 +34,17 @@ public class GameManager {
         millisSleepBoucleurLent = 2500; //7s sec
     }
 
-
+    public void widthOrHeightGameViewChanged(int w, int h) {
+        widthGameView = w;
+        heightGameView = h;
+        animatorVP.widthOrHeightGameViewChanged(w, h);
+    }
 
     public void startNewGame() {
         vP = new VaguePoissons(4);
         lePecheur.setScorePecheur(0);
-        BoucleurRapide boucleurRapide = new BoucleurRapide(millisSleepBoucleurRapide, vP, this);
+        animatorVP = new AnimVaguePoisson(this);
+        BoucleurRapide boucleurRapide = new BoucleurRapide(millisSleepBoucleurRapide, vP, animatorVP, this);
         BoucleurLent boucleurLent = new BoucleurLent(millisSleepBoucleurLent, vP);
         thread1 = new Thread(boucleurRapide);
         thread2 = new Thread(boucleurLent);

@@ -9,9 +9,9 @@ import java.util.ArrayList;
 
 public class BoucleurRapide extends BoucleurAbstrait{
 
-    public BoucleurRapide(int millisSleep, VaguePoissons vP, GameManager myGm){
+    public BoucleurRapide(int millisSleep, VaguePoissons vP, AnimVaguePoisson anim, GameManager myGm){
         super.setListObservateurs(new ArrayList<>());
-        super.attacher(new AnimVaguePoisson(vP, myGm));
+        super.attacher(anim);
         this.setMillisSleep(millisSleep);
         Timer myTimer = new Timer(25, getMillisSleep());
         super.attacher(myTimer);

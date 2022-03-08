@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication"
+    tools:ignore="ExtraText">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name="com.example.MyApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+        android:theme="@style/Theme.MyApplication"
+        tools:ignore="MissingClass">
 
         <activity
             android:name=".activity.MainActivity"
@@ -21,21 +25,21 @@
         </activity>
 
         <activity
-            android:name=".activity.Highscore"
+            android:name=".activity.HighscoreActivity"
             android:label="@string/app_name"
             android:exported="true"
             android:parentActivityName=".activity.MainActivity">
         </activity>
 
         <activity
-            android:name=".activity.Rules"
+            android:name=".activity.RulesActivity"
             android:label="@string/app_name"
             android:exported="true"
             android:parentActivityName=".activity.MainActivity">
         </activity>
 
         <activity
-            android:name=".activity.gameView"
+            android:name=".activity.GameActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
             android:exported="true"

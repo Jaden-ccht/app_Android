@@ -2,38 +2,39 @@ package com.example.myapplication.model.observateurs;
 
 import android.util.Log;
 
+import com.example.MyApplication;
 import com.example.myapplication.model.fish.Poisson;
-import com.example.myapplication.model.fish.VaguePoissons;
 import com.example.myapplication.model.manager.GameManager;
 
-public class AnimVaguePoisson extends Observateur {
-    private VaguePoissons maVaguePoisson;
-    private GameManager gM;
+import java.util.ArrayList;
 
-    public AnimVaguePoisson(VaguePoissons maVaguePoisson, GameManager gM) {
+public class AnimVaguePoisson extends Observateur {
+    private GameManager gM;
+    private int maxHeigthAllowed;
+    private int maxWidthAllowed;
+
+    public AnimVaguePoisson(GameManager gM) {
         this.gM = gM;
-        this.maVaguePoisson = maVaguePoisson;
+        maxHeigthAllowed = 0;
+        maxWidthAllowed = 0;
     }
 
     @Override
     public void update() {
 
-        //VaguePoissons maVaguePoissonUpdated = getMaVaguePoisson();
-        //ArrayList<Poisson> listFishtoRemove = new ArrayList<Poisson>();
+        ArrayList<Poisson> listFishtoRemove = new ArrayList<Poisson>();
         for (Poisson p: gM.getvP().getListPoissons()) {
-            //Log.d("cooFish","Update AnimVague");
             if(!p.isCatched())
                 p.getDeplaceurPoisson().deplacer(p);
+            else if(p.isCatched() || p.getCooXPoisson() > MyApplication.getAppContext().getResources().getDisplayMetrics().widthPixels)
+                listFishtoRemove.add(p);
         }
+        Log.d("maxScreenWidth", String.valueOf(maxWidthAllowed));
+        gM.getvP().getListPoissons().removeAll(listFishtoRemove);
     }
 
-
-    //GETTERS & SETTERS
-    public VaguePoissons getMaVaguePoisson() {
-        return maVaguePoisson;
-    }
-
-    public void setMaVaguePoisson(VaguePoissons maVaguePoisson) {
-        this.maVaguePoisson = maVaguePoisson;
+    public void widthOrHeightGameViewChanged(int w, int h) {
+        maxHeigthAllowed = h;
+        maxWidthAllowed = w;
     }
 }

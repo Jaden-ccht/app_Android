@@ -10,19 +10,18 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.solver.widgets.Rectangle;
 
 import com.example.myapplication.model.fish.Poisson;
 import com.example.myapplication.model.manager.GameManager;
 
-public class CustomViewJeu extends View {
+public class GameView extends View {
     private Drawable mCustomImage;
     private Drawable fish;
     private GameManager gM;
     private Context context;
 
     //CONSTRUCTORS
-    public CustomViewJeu(Context context) {
+    public GameView(Context context) {
         super(context);
         mCustomImage = context.getResources().getDrawable(R.drawable.full_lake);
         fish = context.getResources().getDrawable(R.drawable.fish);
@@ -48,7 +47,6 @@ public class CustomViewJeu extends View {
                             gM.getLePecheur().setScorePecheur(gM.getLePecheur().getScorePecheur() + p.getValeur());
                             gM.getLePecheur().getListPoissonsAttrapes().add(p);
                             Log.d("catch","Attrapé !!!");
-                            System.out.println("Attrapé !!!");
                         }
                     }
                 }
@@ -58,7 +56,7 @@ public class CustomViewJeu extends View {
         this.context = context;
 
     }
-    public CustomViewJeu(Context context, @Nullable AttributeSet attrs) {
+    public GameView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         mCustomImage = context.getResources().getDrawable(R.drawable.full_lake);
         fish = context.getResources().getDrawable(R.drawable.fish);
@@ -84,7 +82,6 @@ public class CustomViewJeu extends View {
                             gM.getLePecheur().setScorePecheur(gM.getLePecheur().getScorePecheur() + p.getValeur());
                             gM.getLePecheur().getListPoissonsAttrapes().add(p);
                             Log.d("catch","Attrapé !!!");
-                            System.out.println("Attrapé !!!");
                         }
                     }
                 }
@@ -92,6 +89,12 @@ public class CustomViewJeu extends View {
             }
         });
         this.context = context;
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        gM.widthOrHeightGameViewChanged(w, h);
     }
 
     @Override
