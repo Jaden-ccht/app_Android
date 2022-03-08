@@ -1,8 +1,5 @@
 package com.example.myapplication.model.observateurs;
 
-import android.util.Log;
-
-import com.example.MyApplication;
 import com.example.myapplication.model.fish.Poisson;
 import com.example.myapplication.model.manager.GameManager;
 
@@ -15,8 +12,6 @@ public class AnimVaguePoisson extends Observateur {
 
     public AnimVaguePoisson(GameManager gM) {
         this.gM = gM;
-        maxHeigthAllowed = 0;
-        maxWidthAllowed = 0;
     }
 
     @Override
@@ -24,12 +19,11 @@ public class AnimVaguePoisson extends Observateur {
 
         ArrayList<Poisson> listFishtoRemove = new ArrayList<Poisson>();
         for (Poisson p: gM.getvP().getListPoissons()) {
-            if(!p.isCatched())
-                p.getDeplaceurPoisson().deplacer(p);
-            else if(p.isCatched() || p.getCooXPoisson() > MyApplication.getAppContext().getResources().getDisplayMetrics().widthPixels)
+            if(p.isCatched() || p.getCooXPoisson() > maxWidthAllowed)
                 listFishtoRemove.add(p);
+            else
+                p.getDeplaceurPoisson().deplacer(p);
         }
-        Log.d("maxScreenWidth", String.valueOf(maxWidthAllowed));
         gM.getvP().getListPoissons().removeAll(listFishtoRemove);
     }
 

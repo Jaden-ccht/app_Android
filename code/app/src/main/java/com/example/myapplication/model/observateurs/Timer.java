@@ -1,5 +1,7 @@
 package com.example.myapplication.model.observateurs;
 
+import android.util.Log;
+
 public class Timer extends Observateur {
     private float timeOf1LoopMillis;
     private float actualTime;
@@ -19,7 +21,7 @@ public class Timer extends Observateur {
         else
             setActualTime(0);
 
-        //Log.d("time", toString().valueOf(getActualTime()));
+        Log.d("time", toString().valueOf(getActualTime()));
     }
 
     public float getActualTime() {

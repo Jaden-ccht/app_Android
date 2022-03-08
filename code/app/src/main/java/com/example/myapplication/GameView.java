@@ -31,18 +31,8 @@ public class GameView extends View {
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN){
                     for(Poisson p : gM.getvP().getListPoissons()) {
 
-                        Rect boundsPoisson = createBoundsXY(p.getCooXPoisson(), p.getCooYPoisson(), p.getHeightSprite());
+                        Rect boundsPoisson = createBoundsXY(p.getCooXPoisson(), p.getCooYPoisson(), p.getHeightSprite()+p.getWidthSprite());
                         if(boundsPoisson.contains((int)motionEvent.getX(),(int) motionEvent.getY())) { //check si le click a lieu dans le rect du poisson
-                    /*
-                    switch (p.getClass().toString()) {
-                        case "class classes.PoissonBombe" -> {
-                            p.setHeightSprite(130);
-                            p.setWidthSprite(130);
-                            p.setSpritePoisson(new Image("img/bigBang.png"));
-                        }
-                        case "class classes.PoissonDore" -> p.setSpritePoisson(new Image("img/poissondorecatched.png"));
-                        case "class classes.PoissonClassique" -> p.setSpritePoisson(new Image("img/fishCatched.png"));
-                    } */
                             p.setCatched(true);
                             gM.getLePecheur().setScorePecheur(gM.getLePecheur().getScorePecheur() + p.getValeur());
                             gM.getLePecheur().getListPoissonsAttrapes().add(p);
@@ -66,7 +56,7 @@ public class GameView extends View {
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN){
                     for(Poisson p : gM.getvP().getListPoissons()) {
 
-                        Rect boundsPoisson = createBoundsXY(p.getCooXPoisson(), p.getCooYPoisson(), p.getHeightSprite());
+                        Rect boundsPoisson = createBoundsXY(p.getCooXPoisson(), p.getCooYPoisson(), p.getHeightSprite()+p.getWidthSprite());
                         if(boundsPoisson.contains((int)motionEvent.getX(),(int) motionEvent.getY())) { //check si le click a lieu dans le rect du poisson
                     /*
                     switch (p.getClass().toString()) {
@@ -114,8 +104,12 @@ public class GameView extends View {
             actualFish.draw(canvas);
         }
         this.invalidate();
-        Log.d("cooXFish", String.valueOf(gM.getvP().getListPoissons().get(0).getCooXPoisson()));
-        Log.d("cooYFish", String.valueOf(gM.getvP().getListPoissons().get(0).getCooYPoisson()));
+
+        //passe au coo du nouveau poisson 0 quand l'ancien disparaît
+        if(!gM.getvP().getListPoissons().isEmpty()) {
+            Log.d("cooXFish", String.valueOf(gM.getvP().getListPoissons().get(0).getCooXPoisson()));
+            Log.d("cooYFish", String.valueOf(gM.getvP().getListPoissons().get(0).getCooYPoisson()));
+        }
     }
 
     private Rect createBoundsXY(int x, int y, int fishSize) {

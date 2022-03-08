@@ -1,6 +1,5 @@
 package com.example.myapplication.activity;
 
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -8,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.recyclerView.HighScoresAdapter;
 import com.example.myapplication.R;
 import com.example.myapplication.model.persistance.OneHS;
+import com.example.myapplication.recyclerView.HighScoresAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
