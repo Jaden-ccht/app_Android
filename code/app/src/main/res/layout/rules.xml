@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="329dp"
-        android:layout_height="179dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/strTuto"
         android:textSize="24sp"
@@ -40,55 +40,44 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:layout_constraintVertical_bias="0.0">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="126dp"
                 android:layout_height="74dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/gold_fish_rule"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.736"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.135" />
+                android:text="@string/gold_fish_rule" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="120dp"
                 android:layout_height="72dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="@string/fish_rule"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.721"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7"
-                app:layout_constraintVertical_bias="0.259" />
+                android:text="@string/fish_rule" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="153dp"
                 android:layout_height="80dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="@string/bomb_fish_rule"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.813"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
-                app:layout_constraintVertical_bias="1.0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:text="@string/bomb_fish_rule" />
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

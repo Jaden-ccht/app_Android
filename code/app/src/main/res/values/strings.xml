@@ -18,4 +18,5 @@
     <string name="bomb_fish_rule">AÏe ! Ne touchez pas à ces poissons, ils vous enlèveront 10 points</string>>
     <string name="fish">Fish</string>
     <string name="fish_rule">Ce sont les poissons les plus fréquents</string>
+    <string name="highscores">Voici la liste des scores de différens joueurs de Canap\'Pêche</string>
 </resources>

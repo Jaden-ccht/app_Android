@@ -1,5 +1,6 @@
 package com.example.myapplication.activity;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -35,5 +36,6 @@ public class Highscore extends AppCompatActivity {
         theRecyclerView.setAdapter(theAdapter);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 }
