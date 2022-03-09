@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -43,19 +42,14 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
     }
 
+    /*
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
         EditText inputText = findViewById(R.id.editTextTextPersonName);
         outState.putString("nickname", inputText.getText().toString());
-        super.onSaveInstanceState(outState);
-    }
+    }*/
 
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        EditText inputText = findViewById(R.id.editTextTextPersonName);
-        inputText.setText(savedInstanceState.getString("nickname"));
-        super.onRestoreInstanceState(savedInstanceState);
-    }
 
     public void settingsClick(View view) {
         Intent monIntent = new Intent(this, HighscoreActivity.class);
@@ -69,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void gameButton(View view) {
         Intent monIntent = new Intent(this, GameActivity.class);
+        EditText inputText = findViewById(R.id.editTextTextPersonName);
+        monIntent.putExtra("nickName", inputText.getText().toString());
         startActivity(monIntent);
     }
 }

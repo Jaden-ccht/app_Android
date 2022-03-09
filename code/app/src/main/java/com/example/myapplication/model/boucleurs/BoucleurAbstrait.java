@@ -5,8 +5,14 @@ import com.example.myapplication.model.observateurs.Observateur;
 import java.util.ArrayList;
 
 public abstract class BoucleurAbstrait implements Runnable{
+    private boolean interrupted;
     private int millisSleep;
     private ArrayList<Observateur> listObservateurs;
+
+
+    public BoucleurAbstrait() {
+        interrupted = false;
+    }
 
     public void attacher(Observateur o) {
         listObservateurs.add(o);
@@ -39,5 +45,13 @@ public abstract class BoucleurAbstrait implements Runnable{
 
     public void setMillisSleep(int millisSleep) {
         this.millisSleep = millisSleep;
+    }
+
+    public boolean isInterrupted() {
+        return interrupted;
+    }
+
+    public void setInterrupted(boolean interrupted) {
+        this.interrupted = interrupted;
     }
 }

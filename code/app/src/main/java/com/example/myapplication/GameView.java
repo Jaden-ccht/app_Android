@@ -14,6 +14,8 @@ import androidx.annotation.Nullable;
 import com.example.myapplication.model.fish.Poisson;
 import com.example.myapplication.model.manager.GameManager;
 
+import java.util.ArrayList;
+
 public class GameView extends View {
     private Drawable mCustomImage;
     private Drawable fish;
@@ -63,7 +65,7 @@ public class GameView extends View {
                         case "class classes.PoissonBombe" -> {
                             p.setHeightSprite(130);
                             p.setWidthSprite(130);
-                            p.setSpritePoisson(new Image("img/bigBang.png"));
+                            p.setSpritePoisson(new Image("img/bigbang.png"));
                         }
                         case "class classes.PoissonDore" -> p.setSpritePoisson(new Image("img/poissondorecatched.png"));
                         case "class classes.PoissonClassique" -> p.setSpritePoisson(new Image("img/fishCatched.png"));
@@ -95,12 +97,20 @@ public class GameView extends View {
         mCustomImage.setBounds(imageBounds);
         mCustomImage.draw(canvas);
 
-        //fish.setBounds(createBoundsXY(640,150, 150));
-        //fish.draw(canvas);
-
-        for (Poisson p: gM.getvP().getListPoissons()) {
-            Drawable actualFish = context.getResources().getDrawable(R.drawable.fish);
-            actualFish.setBounds(createBoundsXY(p.getCooXPoisson(), p.getCooYPoisson(), 150));
+        //recréer une une Arraylist avant de la parcourir
+        //permet d'éviter les ConcurrentModificationException !! (sinon on peut faire des SynchronizedList)
+        ArrayList<Poisson> myListePoissonSynchronized = new ArrayList(gM.getvP().getListPoissons());
+        for (Poisson p: myListePoissonSynchronized) {
+            Drawable actualFish = null;
+            int fishSize = 150;
+            if(p.getNoDrawableInR() == R.drawable.fish) actualFish = context.getResources().getDrawable(R.drawable.fish);
+            else if(p.getNoDrawableInR() == R.drawable.poissondore) actualFish = context.getResources().getDrawable(R.drawable.poissondore);
+            else if(p.getNoDrawableInR() == R.drawable.poissonbombe && !p.isCatched()) actualFish = context.getResources().getDrawable(R.drawable.poissonbombe);
+            else if(p.getNoDrawableInR() == R.drawable.poissonbombe && p.isCatched()) {
+                actualFish = context.getResources().getDrawable(R.drawable.bigbang);
+                fishSize = 300;
+            }
+            actualFish.setBounds(createBoundsXY(p.getCooXPoisson(), p.getCooYPoisson(), fishSize));
             actualFish.draw(canvas);
         }
         this.invalidate();

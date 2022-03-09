@@ -1,5 +1,6 @@
 package com.example.myapplication.model.observateurs;
 
+import com.example.myapplication.R;
 import com.example.myapplication.model.fish.Poisson;
 import com.example.myapplication.model.manager.GameManager;
 
@@ -19,9 +20,9 @@ public class AnimVaguePoisson extends Observateur {
 
         ArrayList<Poisson> listFishtoRemove = new ArrayList<Poisson>();
         for (Poisson p: gM.getvP().getListPoissons()) {
-            if(p.isCatched() || p.getCooXPoisson() > maxWidthAllowed)
+            if((p.isCatched() && p.getNoDrawableInR() != R.drawable.poissonbombe) || p.getCooXPoisson() > maxWidthAllowed)
                 listFishtoRemove.add(p);
-            else
+            else if(p.getNoDrawableInR() != R.drawable.poissonbombe || (!p.isCatched() && p.getNoDrawableInR() == R.drawable.poissonbombe))
                 p.getDeplaceurPoisson().deplacer(p);
         }
         gM.getvP().getListPoissons().removeAll(listFishtoRemove);

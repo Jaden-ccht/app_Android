@@ -1,5 +1,6 @@
 package com.example.myapplication.model.manager;
 
+import com.example.myapplication.model.MyThread;
 import com.example.myapplication.model.boucleurs.BoucleurLent;
 import com.example.myapplication.model.boucleurs.BoucleurRapide;
 import com.example.myapplication.model.fish.VaguePoissons;
@@ -15,8 +16,8 @@ public class GameManager {
     private final int millisSleepBoucleurRapide;
     private final int millisSleepBoucleurLent;
     private Timer theTimer;
-    private Thread thread1;
-    private Thread thread2;
+    private MyThread thread1;
+    private MyThread thread2;
     private AnimVaguePoisson animatorVP;
     private int heightGameView;
     private int widthGameView;
@@ -41,15 +42,20 @@ public class GameManager {
     }
 
     public void startNewGame() {
-        vP = new VaguePoissons(4);
+        vP = new VaguePoissons(6);
         lePecheur.setScorePecheur(0);
         animatorVP = new AnimVaguePoisson(this);
         BoucleurRapide boucleurRapide = new BoucleurRapide(millisSleepBoucleurRapide, vP, animatorVP, this);
         BoucleurLent boucleurLent = new BoucleurLent(millisSleepBoucleurLent, vP);
-        thread1 = new Thread(boucleurRapide);
-        thread2 = new Thread(boucleurLent);
+        thread1 = new MyThread(boucleurRapide);
+        thread2 = new MyThread(boucleurLent);
         thread1.start();
         thread2.start();
+    }
+
+    public void stopGame() {
+        thread1.getBcl().setInterrupted(true);
+        thread2.getBcl().setInterrupted(true);
     }
 
 
@@ -90,7 +96,7 @@ public class GameManager {
         return thread1;
     }
 
-    public void setThread1(Thread thread1) {
+    public void setThread1(MyThread thread1) {
         this.thread1 = thread1;
     }
 
@@ -98,7 +104,7 @@ public class GameManager {
         return thread2;
     }
 
-    public void setThread2(Thread thread2) {
+    public void setThread2(MyThread thread2) {
         this.thread2 = thread2;
     }
 }

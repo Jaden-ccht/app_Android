@@ -16,7 +16,7 @@ public class BoucleurLent extends BoucleurAbstrait{
 
     @Override
     public void run(){
-        while(true) {
+        while(!isInterrupted()) {
             //voir dans la classe mère
             notifier();
             try {
