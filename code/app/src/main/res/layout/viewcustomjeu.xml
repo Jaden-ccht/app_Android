@@ -10,4 +10,7 @@
 
     </com.example.myapplication.GameView>
 
+    <!-- include permet de mettre une vue par-dessus (ici la vue de pause) -->
+    <include layout="@layout/game_paused" android:id="@+id/game_paused" android:visibility="invisible"/>
+    <include layout="@layout/countdown" android:id="@+id/countdown" android:visibility="invisible"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

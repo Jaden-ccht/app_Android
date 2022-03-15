@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green_tuto">#009933</color>
     <color name="yummy_yellow">#FFCC00</color>
+    <color name="pause_grey">#A7A7A7</color>
 </resources>

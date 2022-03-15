@@ -19,4 +19,9 @@
     <string name="fish">Fish</string>
     <string name="fish_rule">Ce sont les poissons les plus fréquents</string>
     <string name="highscores">Voici la liste des scores de différens joueurs de Canap\'Pêche</string>
+    <string name="pause">PAUSE</string>
+    <string name="player_name">player_name</string>
+    <string name="time_remaining">time_remaining</string>
+    <string name="btn_continue">Continue</string>
+    <string name="player_score">player_score</string>
 </resources>

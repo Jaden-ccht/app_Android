@@ -6,11 +6,14 @@
         <entry key="../../../../../../../layout/custom_preview.xml" value="0.38333333333333336" />
         <entry key="../../../../../layout/custom_preview.xml" value="0.3098958333333333" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3104166666666667" />
+        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/countdown.xml" value="0.25" />
+        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/game_paused.xml" value="0.21428571428571427" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/game_view.xml" value="0.21822916666666667" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/highscore.xml" value="0.35520833333333335" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/one_score.xml" value="0.33" />
+        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/pause.xml" value="0.22" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewaccueil.xml" value="0.33" />
-        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewcustomjeu.xml" value="0.278125" />
+        <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewcustomjeu.xml" value="0.1" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewjeu.xml" value="0.33" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/layout/viewtutolog.xml" value="0.22" />
         <entry key="../../../../etud/machaumont2/projetandroid/code/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.20092592592592592" />
