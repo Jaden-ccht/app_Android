@@ -6,8 +6,12 @@ import com.example.myapplication.model.boucleurs.BoucleurRapide;
 import com.example.myapplication.model.fish.VaguePoissons;
 import com.example.myapplication.model.observateurs.AnimVaguePoisson;
 import com.example.myapplication.model.observateurs.Timer;
+import com.example.myapplication.model.persistance.ChargeurHS;
 import com.example.myapplication.model.persistance.Highscores;
+import com.example.myapplication.model.persistance.SauvegardeurHS;
 import com.example.myapplication.model.player.Pecheur;
+
+import java.io.IOException;
 
 public class GameManager {
     private Pecheur lePecheur;
@@ -19,18 +23,19 @@ public class GameManager {
     private MyThread thread1;
     private MyThread thread2;
     private AnimVaguePoisson animatorVP;
+    private BoucleurRapide boucleurRapide;
+    private BoucleurLent boucleurLent;
     private int heightGameView;
     private int widthGameView;
 
     public GameManager() {
         vP = new VaguePoissons(4);
-        /*
         try {
             hS = new Highscores(new SauvegardeurHS(), new ChargeurHS());
             System.out.println(hS.getMapHighScores().toString());
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
         millisSleepBoucleurRapide = 25; //25 millissec
         millisSleepBoucleurLent = 2500; //7s sec
     }
@@ -45,8 +50,8 @@ public class GameManager {
         vP = new VaguePoissons(6);
         lePecheur.setScorePecheur(0);
         animatorVP = new AnimVaguePoisson(this);
-        BoucleurRapide boucleurRapide = new BoucleurRapide(millisSleepBoucleurRapide, vP, animatorVP, this);
-        BoucleurLent boucleurLent = new BoucleurLent(millisSleepBoucleurLent, vP);
+        boucleurRapide = new BoucleurRapide(millisSleepBoucleurRapide, vP, animatorVP, this);
+        boucleurLent = new BoucleurLent(millisSleepBoucleurLent, vP);
         thread1 = new MyThread(boucleurRapide);
         thread2 = new MyThread(boucleurLent);
         thread1.start();
@@ -54,8 +59,19 @@ public class GameManager {
     }
 
     public void stopGame() {
+        theTimer.setActive(false);
         thread1.getBcl().setInterrupted(true);
         thread2.getBcl().setInterrupted(true);
+    }
+
+    public void resumeGame() {
+        theTimer.setActive(true);
+        boucleurRapide.setInterrupted(false);
+        boucleurLent.setInterrupted(false);
+        thread1 = new MyThread(boucleurRapide);
+        thread2 = new MyThread(boucleurLent);
+        thread1.start();
+        thread2.start();
     }
 
 

@@ -3,7 +3,9 @@ package com.example.myapplication.model.persistance;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.Comparator;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class ChargeurHS {
 
