@@ -1,5 +1,7 @@
 package com.example.myapplication.model.observateurs;
 
+import android.util.Log;
+
 import com.example.myapplication.R;
 import com.example.myapplication.model.fish.Poisson;
 import com.example.myapplication.model.manager.GameManager;
@@ -26,6 +28,7 @@ public class AnimVaguePoisson extends Observateur {
                 p.getDeplaceurPoisson().deplacer(p);
         }
         gM.getvP().getListPoissons().removeAll(listFishtoRemove);
+        Log.d("testscore",String.valueOf(gM.getLePecheur().getScorePecheur()));
     }
 
     public void widthOrHeightGameViewChanged(int w, int h) {

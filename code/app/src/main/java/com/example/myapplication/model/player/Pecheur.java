@@ -8,6 +8,7 @@ public class Pecheur {
     private String pseudo;
     private ArrayList<Poisson> listPoissonsAttrapes;
     private int scorePecheur;
+    private String scorePecheurString;
 
     //constructeur
     public Pecheur(String pseudo) {
@@ -47,6 +48,14 @@ public class Pecheur {
     }
 
     public void setScorePecheur(int scorePecheur) {
-        this.scorePecheur = scorePecheur;
+        this.scorePecheur = scorePecheur; this.scorePecheurString = String.valueOf(scorePecheur);
+    }
+
+    public String getScorePecheurString() {
+        return scorePecheurString;
+    }
+
+    public void setScorePecheurString(String scorePecheurString) {
+        this.scorePecheurString = scorePecheurString;
     }
 }

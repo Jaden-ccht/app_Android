@@ -1,5 +1,8 @@
 package com.example.myapplication.model.manager;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.example.myapplication.model.MyThread;
 import com.example.myapplication.model.boucleurs.BoucleurLent;
 import com.example.myapplication.model.boucleurs.BoucleurRapide;
@@ -12,8 +15,9 @@ import com.example.myapplication.model.persistance.SauvegardeurHS;
 import com.example.myapplication.model.player.Pecheur;
 
 import java.io.IOException;
+import java.io.Serializable;
 
-public class GameManager {
+public class GameManager implements Serializable {
     private Pecheur lePecheur;
     private VaguePoissons vP;
     private Highscores hS;
@@ -38,6 +42,13 @@ public class GameManager {
         }
         millisSleepBoucleurRapide = 25; //25 millissec
         millisSleepBoucleurLent = 2500; //7s sec
+    }
+
+    protected GameManager(Parcel in) {
+        millisSleepBoucleurRapide = in.readInt();
+        millisSleepBoucleurLent = in.readInt();
+        heightGameView = in.readInt();
+        widthGameView = in.readInt();
     }
 
     public void widthOrHeightGameViewChanged(int w, int h) {

@@ -2,6 +2,7 @@ package com.example.myapplication.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -9,9 +10,13 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.myapplication.GameView;
 import com.example.myapplication.R;
+import com.example.myapplication.fragments.MyFragment;
 import com.example.myapplication.model.MyThread;
 import com.example.myapplication.model.manager.GameManager;
 import com.example.myapplication.model.player.Pecheur;
@@ -29,16 +34,22 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         myNickname = intent.getExtras().getString("nickName");
+        theGM = new GameManager();
+        theGM.setLePecheur(new Pecheur(myNickname));
+
+        getIntent().putExtra("monGameManager", theGM);
+        FragmentManager fm = getSupportFragmentManager();
+        Fragment fragment = new MyFragment();
+        fm.beginTransaction().replace(R.id.frag, fragment).commit();
+
         setContentView(R.layout.viewcustomjeu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         myCustomView = findViewById(R.id.customview); //retourne la CustomViewJeu
-        theGM = new GameManager();
         myCustomView.setgM(theGM);
-        myCustomView.getgM().setLePecheur(new Pecheur(myNickname));
         myCustomView.getgM().startNewGame();
 
         game_paused = findViewById(R.id.game_paused);
-        //context -> getFileDir (chemein du fichier pr persistance a changer ds gameManager)
+        //context -> getFileDir (chemin du fichier pr persistance profonde a changer ds gameManager)
     }
 
     @Override

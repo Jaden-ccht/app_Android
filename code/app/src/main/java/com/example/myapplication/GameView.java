@@ -50,6 +50,7 @@ public class GameView extends View {
     }
     public GameView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+
         mCustomImage = context.getResources().getDrawable(R.drawable.full_lake);
         fish = context.getResources().getDrawable(R.drawable.fish);
         this.setOnTouchListener(new OnTouchListener() {

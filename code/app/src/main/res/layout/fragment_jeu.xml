@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="pecheur"
+            type="com.example.myapplication.model.player.Pecheur" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="129dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="549dp"
+            android:layout_marginRight="549dp"
+            android:text="@{pecheur.pseudo}"
+            android:textColor="@color/yummy_yellow"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="score :"
+            android:textColor="@color/yummy_yellow"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/real_score"
+            app:layout_constraintEnd_toStartOf="@+id/real_score"
+            app:layout_constraintStart_toEndOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/real_score" />
+
+        <TextView
+            android:id="@+id/real_score"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="63dp"
+            android:layout_marginRight="63dp"
+            android:layout_marginBottom="2dp"
+            android:text="@{pecheur.scorePecheurString}"
+            android:textColor="@color/yummy_yellow"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/time_remaining"
+            app:layout_constraintEnd_toStartOf="@+id/time_remaining"
+            app:layout_constraintStart_toEndOf="@+id/score"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/time_remaining"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginRight="55dp"
+            android:text=""
+            android:textColor="@color/yummy_yellow"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/real_score"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

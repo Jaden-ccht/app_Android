@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <com.example.myapplication.GameView
         android:id="@+id/customview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </com.example.myapplication.GameView>
 
     <!-- include permet de mettre une vue par-dessus (ici la vue de pause) -->
-    <include layout="@layout/game_paused" android:id="@+id/game_paused" android:visibility="invisible"/>
+    <include
+        android:id="@+id/game_paused"
+        layout="@layout/game_paused"
+        android:layout_width="758dp"
+        android:layout_height="389dp"
+        android:visibility="invisible" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frag"
+        android:name="com.example.myapplication.fragments.MyFragment"
+        android:layout_width="754dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
