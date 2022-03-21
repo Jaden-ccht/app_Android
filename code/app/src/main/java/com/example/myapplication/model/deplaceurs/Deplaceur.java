@@ -4,5 +4,5 @@ import com.example.myapplication.model.fish.Poisson;
 
 public abstract class Deplaceur {
 
-    public void deplacer(Poisson p) {}
+    public abstract void deplacer(Poisson p);
 }
