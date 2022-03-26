@@ -31,6 +31,7 @@ public class MyFragment extends Fragment {
         monGameManager = (GameManager) i.getSerializableExtra("monGameManager");
 
         FragmentJeuBinding fragmentJeuBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_jeu, null, false);
+
         fragmentJeuBinding.setPecheur(monGameManager.getLePecheur());
         View myView = fragmentJeuBinding.getRoot();
 

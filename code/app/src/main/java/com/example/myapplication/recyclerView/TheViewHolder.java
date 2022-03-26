@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.R;
 import com.example.myapplication.model.persistance.OneHS;
 
-public class theViewHolder extends RecyclerView.ViewHolder {
+public class TheViewHolder extends RecyclerView.ViewHolder {
     private TextView score;
     private TextView pseudo;
 
-    theViewHolder(View myView) {
+    TheViewHolder(View myView) {
         super(myView);
 
         score = (TextView) myView.findViewById(R.id.scores);

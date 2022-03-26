@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.customView;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -11,6 +11,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
+import com.example.myapplication.R;
 import com.example.myapplication.model.fish.Poisson;
 import com.example.myapplication.model.manager.GameManager;
 
@@ -18,7 +19,6 @@ import java.util.ArrayList;
 
 public class GameView extends View {
     private Drawable mCustomImage;
-    private Drawable fish;
     private GameManager gM;
     private Context context;
 
@@ -26,7 +26,6 @@ public class GameView extends View {
     public GameView(Context context) {
         super(context);
         mCustomImage = context.getResources().getDrawable(R.drawable.full_lake);
-        fish = context.getResources().getDrawable(R.drawable.fish);
         this.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -52,7 +51,6 @@ public class GameView extends View {
         super(context, attrs);
 
         mCustomImage = context.getResources().getDrawable(R.drawable.full_lake);
-        fish = context.getResources().getDrawable(R.drawable.fish);
         this.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {

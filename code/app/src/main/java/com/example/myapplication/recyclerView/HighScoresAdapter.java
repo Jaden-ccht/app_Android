@@ -12,7 +12,7 @@ import com.example.myapplication.model.persistance.OneHS;
 
 import java.util.List;
 
-public class HighScoresAdapter extends RecyclerView.Adapter<theViewHolder> {
+public class HighScoresAdapter extends RecyclerView.Adapter<TheViewHolder> {
     private List<OneHS> listOneHS;
 
     public HighScoresAdapter(List<OneHS> listOneHS) {
@@ -21,14 +21,14 @@ public class HighScoresAdapter extends RecyclerView.Adapter<theViewHolder> {
 
     @NonNull
     @Override
-    public theViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TheViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layInf = LayoutInflater.from(parent.getContext());
         View theView = layInf.inflate(R.layout.one_score, parent, false);
-        return new theViewHolder(theView);
+        return new TheViewHolder(theView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull theViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TheViewHolder holder, int position) {
         holder.display(listOneHS.get(position));
     }
 

@@ -2,7 +2,6 @@ package com.example.myapplication.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,9 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.myapplication.GameView;
+import com.example.myapplication.customView.GameView;
 import com.example.myapplication.R;
 import com.example.myapplication.fragments.MyFragment;
 import com.example.myapplication.model.MyThread;
