@@ -1,5 +1,6 @@
 package com.example.myapplication.activity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -36,5 +37,15 @@ public class HighscoreActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+    }
+
+    @Override
+    protected void onResume() {
+        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            findViewById(R.id.imageView6).setScrollX(0);
+        } else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+            findViewById(R.id.imageView6).setScrollX(-100);
+        }
+        super.onResume();
     }
 }
