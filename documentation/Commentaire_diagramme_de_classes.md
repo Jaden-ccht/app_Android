@@ -32,3 +32,8 @@ persistance contient plusieurs classes, avec pour but principal de gérer les Hi
 ### Manager
 le GameManager est une de nos classes les plus importantes. C'est lui qui gère le lancement du jeu (et donc la création de Threads, Boucleurs etc ...) mais aussi l'arrêt de ces threads, en cas de pause ou de destruction de l'activité de jeu.
 C'est lui qui possède la map contenant les scores, le Pêcheur, ainsi que la liste des poissons en jeu. 
+
+### Activity
+Contient l’intégralité des code behind de nos activity dont les différentes méthodes sont liées aux boutons par exemple. La classe GameActivity est ici la plus importante car c’est ici qu’est instancié un objet de classe GameManager permettant ainsi la gestion globale du jeu. Elle permet aussi l’instanciation de notre Custom View « GameView » (package « customView »), qui est un canvas sur lequel sont dessinés les poissons des différentes vagues à chaque appel de la méthode onDraw().
+
+Enfin, la classe HighscoreActivity permet l’affichage d’une Recycler View grâce à l’utilisation d’un adaptateur « HighScoresAdaptater » du package « recyclerView » ainsi que de plusieurs ViewHolder « TheViewHolder ».
