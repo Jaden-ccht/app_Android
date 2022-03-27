@@ -1,5 +1,6 @@
 package com.example.myapplication.recyclerView;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ public class HighScoresAdapter extends RecyclerView.Adapter<TheViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull TheViewHolder holder, int position) {
         holder.display(listOneHS.get(position));
+        holder.itemView.setBackgroundColor(Color.parseColor("#00ffffff"));
     }
 
     @Override

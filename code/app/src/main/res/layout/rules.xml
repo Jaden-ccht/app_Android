@@ -5,11 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop"
+        android:scrollX="-100dp"
+        android:scrollY="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blurbg" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rules"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,6 +40,7 @@
         android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="@string/strTuto"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,8 +49,10 @@
         app:layout_constraintVertical_bias="0.065" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -50,27 +68,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners2"
                 android:orientation="horizontal">
 
                 <Space
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
-                </Space>
+                    android:layout_weight="1"></Space>
 
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/poissondore" />
 
                 <Space
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
-                </Space>
+                    android:layout_weight="1"></Space>
 
                 <TextView
                     android:id="@+id/textView7"
@@ -82,69 +99,70 @@
                     android:gravity="center"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/gold_fish_rule" />
+                    android:text="@string/gold_fish_rule"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
-                </Space>
+                    android:layout_weight="1"></Space>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners2"
                 android:orientation="horizontal">
 
                 <Space
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
-                </Space>
+                    android:layout_weight="1"></Space>
 
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     app:srcCompat="@drawable/fish" />
 
                 <Space
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
-                </Space>
+                    android:layout_weight="1"></Space>
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="150dp"
                     android:layout_height="72dp"
                     android:layout_gravity="center"
-                    android:gravity="center"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
+                    android:gravity="center"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/fish_rule" />
+                    android:text="@string/fish_rule"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
-                </Space>
+                    android:layout_weight="1"></Space>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners2"
                 android:orientation="horizontal">
 
                 <Space
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
-                </Space>
+                    android:layout_weight="1"></Space>
 
                 <ImageView
                     android:id="@+id/imageView5"
@@ -156,24 +174,24 @@
                 <Space
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
-                </Space>
+                    android:layout_weight="1"></Space>
 
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="150dp"
                     android:layout_height="80dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="@string/bomb_fish_rule" />
+                    android:text="@string/bomb_fish_rule"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="1dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" >
-                </Space>
+                    android:layout_weight="1"></Space>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
