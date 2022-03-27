@@ -44,13 +44,6 @@ public class GameManager implements Serializable {
         millisSleepBoucleurLent = 2500; //7s sec
     }
 
-    protected GameManager(Parcel in) {
-        millisSleepBoucleurRapide = in.readInt();
-        millisSleepBoucleurLent = in.readInt();
-        heightGameView = in.readInt();
-        widthGameView = in.readInt();
-    }
-
     public void widthOrHeightGameViewChanged(int w, int h) {
         widthGameView = w;
         heightGameView = h;

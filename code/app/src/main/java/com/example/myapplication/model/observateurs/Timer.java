@@ -22,7 +22,7 @@ public class Timer extends Observateur {
             } else
                 setActualTime(0);
 
-            Log.d("time", toString().valueOf(getActualTime()));
+            //Log.d("time", toString().valueOf(getActualTime()));
         }
     }
 

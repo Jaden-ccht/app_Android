@@ -33,8 +33,6 @@ public class MyFragment extends Fragment {
         FragmentJeuBinding fragmentJeuBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_jeu, null, false);
 
         fragmentJeuBinding.setPecheur(monGameManager.getLePecheur());
-        View myView = fragmentJeuBinding.getRoot();
-
-        return myView;
+        return fragmentJeuBinding.getRoot();
     }
 }

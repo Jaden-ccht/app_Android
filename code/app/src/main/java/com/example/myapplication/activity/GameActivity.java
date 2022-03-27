@@ -50,6 +50,7 @@ public class GameActivity extends AppCompatActivity {
         //context -> getFileDir (chemin du fichier pr persistance profonde a changer ds gameManager)
     }
 
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -59,7 +60,6 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("testpause", "resume");
         Button btnContinue = (Button) findViewById(R.id.btn_continue);
         bindButtonContinue(btnContinue);
     }
@@ -67,7 +67,6 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("testpause", "pause");
         game_paused.setVisibility(View.VISIBLE);
         theGM.stopGame();
     }
